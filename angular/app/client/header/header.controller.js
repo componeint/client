@@ -7,14 +7,14 @@
 
     angular
         .module('client')
-        .controller('HeaderController', HeaderController);
+        .controller('ClientHeaderController', ClientHeaderController);
 
-    HeaderController.$inject = ['$timeout', '$mdSidenav', '$log'];
+    ClientHeaderController.$inject = ['$timeout', '$mdSidenav', '$log'];
 
     /* @ngInject */
-    function HeaderController($timeout, $mdSidenav, $log) {
+    function ClientHeaderController($timeout, $mdSidenav, $log) {
         var vm         = this;
-        vm.title       = 'HeaderController';
+        vm.title       = 'ClientHeaderController';
         vm.toggleLeft  = buildDelayedToggler('left');
         vm.toggleRight = buildToggler('right');
         vm.isOpenRight = function() {
