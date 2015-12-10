@@ -6,7 +6,7 @@
     'use strict';
 
     angular
-        .module('app.controllers')
+        .module('client')
         .controller('StaticpageHeaderController', StaticpageHeaderController);
 
     StaticpageHeaderController.$inject = ['$timeout', '$mdSidenav', '$log'];
