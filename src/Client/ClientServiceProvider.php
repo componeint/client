@@ -1,4 +1,4 @@
-<?php namespace Client;
+<?php namespace Onderdelen\Client;
 
 use Illuminate\Support\ServiceProvider;
 
