@@ -1,5 +1,7 @@
 <?php namespace Onderdelen\Client;
 
+use ReflectionClass;
+use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
 
 class ClientServiceProvider extends ServiceProvider
