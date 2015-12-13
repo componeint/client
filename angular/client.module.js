@@ -8,7 +8,7 @@
     angular
         .module('client', [
             /* Shared */
-            'main',
+            'app.foundation',
             'widgets'
         ]);
 
