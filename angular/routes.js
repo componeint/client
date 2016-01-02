@@ -31,7 +31,7 @@
                     },
                     'sidenav@client'  : {
                         templateUrl : view('client.sidenav'),
-                        controller  : 'ClientLeftController',
+                        controller  : 'ClientSidenavController',
                         controllerAs: 'sidenav'
                     },
                     'aside@client' : {
@@ -74,7 +74,7 @@
                     },
                     'sidenav@staticpage'  : {
                         templateUrl : view('staticpage.sidenav'),
-                        controller  : 'StaticpageLeftController',
+                        controller  : 'StaticpageSidenavController',
                         controllerAs: 'sidenav'
                     },
                     'aside@staticpage' : {
