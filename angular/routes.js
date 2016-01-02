@@ -29,15 +29,15 @@
                         controller  : 'ClientHeaderController',
                         controllerAs: 'header'
                     },
-                    'left@client'  : {
-                        templateUrl : view('client.left'),
+                    'sidenav@client'  : {
+                        templateUrl : view('client.sidenav'),
                         controller  : 'ClientLeftController',
-                        controllerAs: 'left'
+                        controllerAs: 'sidenav'
                     },
-                    'right@client' : {
-                        templateUrl : view('client.right'),
+                    'aside@client' : {
+                        templateUrl : view('client.aside'),
                         controller  : 'ClientRightController',
-                        controllerAs: 'right'
+                        controllerAs: 'aside'
                     },
                     'footer@client': {
                         templateUrl : view('client.footer'),
@@ -72,15 +72,15 @@
                         controller  : 'StaticpageHeaderController',
                         controllerAs: 'header'
                     },
-                    'left@staticpage'  : {
-                        templateUrl : view('staticpage.left'),
+                    'sidenav@staticpage'  : {
+                        templateUrl : view('staticpage.sidenav'),
                         controller  : 'StaticpageLeftController',
-                        controllerAs: 'left'
+                        controllerAs: 'sidenav'
                     },
-                    'right@staticpage' : {
-                        templateUrl : view('staticpage.right'),
+                    'aside@staticpage' : {
+                        templateUrl : view('staticpage.aside'),
                         controller  : 'StaticpageRightController',
-                        controllerAs: 'right'
+                        controllerAs: 'aside'
                     },
                     'footer@staticpage': {
                         templateUrl : view('staticpage.footer'),
