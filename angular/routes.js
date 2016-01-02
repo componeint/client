@@ -36,7 +36,7 @@
                     },
                     'aside@client' : {
                         templateUrl : view('client.aside'),
-                        controller  : 'ClientRightController',
+                        controller  : 'ClientAsideController',
                         controllerAs: 'aside'
                     },
                     'footer@client': {
@@ -79,7 +79,7 @@
                     },
                     'aside@staticpage' : {
                         templateUrl : view('staticpage.aside'),
-                        controller  : 'StaticpageRightController',
+                        controller  : 'StaticpageAsideController',
                         controllerAs: 'aside'
                     },
                     'footer@staticpage': {
