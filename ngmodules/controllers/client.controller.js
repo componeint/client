@@ -1,4 +1,5 @@
 /**
+ * client.controller.js
  * Created by anonymous on 10/12/15 7:28.
  */
 
@@ -14,7 +15,6 @@
     /* @ngInject */
     function ClientController() {
         var vm   = this;
-        vm.title = 'ClientController';
 
         activate();
 
