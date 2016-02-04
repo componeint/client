@@ -1,4 +1,5 @@
 /**
+ * staticpage.controller.js
  * Created by anonymous on 10/12/15 7:35.
  */
 
@@ -14,7 +15,6 @@
     /* @ngInject */
     function StaticpageController() {
         var vm   = this;
-        vm.title = 'StaticpageController';
 
         activate();
 
