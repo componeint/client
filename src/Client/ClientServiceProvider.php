@@ -1,4 +1,10 @@
-<?php namespace Onderdelen\Client;
+<?php
+/**
+ * ClientServiceProvider.php
+ * Created by anonymous on 09/12/15 13:12.
+ */
+
+namespace Onderdelen\Client;
 
 use ReflectionClass;
 use Illuminate\Foundation\AliasLoader;
