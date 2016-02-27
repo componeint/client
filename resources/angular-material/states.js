@@ -10,42 +10,42 @@
         .module('client')
         .config(clientRouter);
 
-    clientRouter.$inject = ['$stateProvider', '$urlRouterProvider'];
+    clientRouter.$inject = ['$stateProvider', '$urlRouterProvider', 'layoutProvider'];
 
     /* @ngInject */
-    function clientRouter($stateProvider, $urlRouterProvider) {
+    function clientRouter($stateProvider, $urlRouterProvider, layoutProvider) {
         $urlRouterProvider.otherwise('/');
 
         $stateProvider
             .state('client', {
                 abstract: true,
                 views   : {
-                    'layout@'      : {
-                        templateUrl : layout('client.simple'),
+                    'layout@'       : {
+                        templateUrl : layoutProvider.layout('themes.minimalist'),
                         controller  : 'ClientController',
                         controllerAs: 'client'
                     },
-                    'header@client': {
-                        templateUrl : view('client.header'),
+                    'header@client' : {
+                        templateUrl : layoutProvider.view('client.header'),
                         controller  : 'ClientHeaderController',
                         controllerAs: 'header'
                     },
-                    'sidenav@client'  : {
-                        templateUrl : view('client.sidenav'),
+                    'sidenav@client': {
+                        templateUrl : layoutProvider.view('client.sidenav'),
                         controller  : 'ClientSidenavController',
                         controllerAs: 'sidenav'
                     },
-                    'aside@client' : {
-                        templateUrl : view('client.aside'),
+                    'aside@client'  : {
+                        templateUrl : layoutProvider.view('client.aside'),
                         controller  : 'ClientAsideController',
                         controllerAs: 'aside'
                     },
-                    'footer@client': {
-                        templateUrl : view('client.footer'),
+                    'footer@client' : {
+                        templateUrl : layoutProvider.view('client.footer'),
                         controller  : 'ClientFooterController',
                         controllerAs: 'footer'
                     },
-                    'main@client'  : {}
+                    'main@client'   : {}
                 }
             })
             .state('client.home', {
@@ -53,7 +53,7 @@
                 data : {pageName: 'Homepage'},
                 views: {
                     'main@client': {
-                        templateUrl : view('client.home'),
+                        templateUrl : layoutProvider.view('client.home'),
                         controller  : 'ClientHomeController',
                         controllerAs: 'home'
                     }
@@ -63,32 +63,32 @@
                 abstract: true,
                 url     : '/page',
                 views   : {
-                    'layout@'          : {
-                        templateUrl : layout('staticpage.simple'),
+                    'layout@'           : {
+                        templateUrl : layoutProvider.layout('staticpage.simple'),
                         controller  : 'StaticpageController',
                         controllerAs: 'staticpage'
                     },
-                    'header@staticpage': {
-                        templateUrl : view('staticpage.header'),
+                    'header@staticpage' : {
+                        templateUrl : layoutProvider.view('staticpage.header'),
                         controller  : 'StaticpageHeaderController',
                         controllerAs: 'header'
                     },
-                    'sidenav@staticpage'  : {
-                        templateUrl : view('staticpage.sidenav'),
+                    'sidenav@staticpage': {
+                        templateUrl : layoutProvider.view('staticpage.sidenav'),
                         controller  : 'StaticpageSidenavController',
                         controllerAs: 'sidenav'
                     },
-                    'aside@staticpage' : {
-                        templateUrl : view('staticpage.aside'),
+                    'aside@staticpage'  : {
+                        templateUrl : layoutProvider.view('staticpage.aside'),
                         controller  : 'StaticpageAsideController',
                         controllerAs: 'aside'
                     },
-                    'footer@staticpage': {
-                        templateUrl : view('staticpage.footer'),
+                    'footer@staticpage' : {
+                        templateUrl : layoutProvider.view('staticpage.footer'),
                         controller  : 'StaticpageFooterController',
                         controllerAs: 'footer'
                     },
-                    'main@staticpage'  : {}
+                    'main@staticpage'   : {}
                 }
             })
             .state('staticpage.landing', {
@@ -96,66 +96,12 @@
                 data : {pageName: 'Landing page'},
                 views: {
                     'main@staticpage': {
-                        templateUrl : view('staticpage.landing'),
+                        templateUrl : layoutProvider.view('staticpage.landing'),
                         controller  : 'StaticpageLandingController',
                         controllerAs: 'landing'
                     }
                 }
             });
-
-        function dashboard(viewName) {
-            if (viewName !== '') {
-                return './views/dashboard/' + appName(viewName) + '/' + fileDir(viewName) + '/' + fileName(viewName) + '.html';
-            } else {
-                return './views/app/app/home/home.html';
-            }
-        }
-
-        function view(viewName) {
-            if (viewName !== '') {
-                return './views/app/' + appName(viewName) + '/' + fileDir(viewName) + '/' + fileName(viewName) + '.html';
-            } else {
-                return './views/app/app/home/home.html';
-            }
-        }
-
-        function layout(viewName) {
-            if (viewName !== '') {
-                return './views/layouts/' + appName(viewName) + '/' + fileDir(viewName) + '/' + fileName(viewName) + '.html';
-            } else {
-                return './views/app/app/home/home.html';
-            }
-        }
-
-        function appName(v) {
-            if (v.split('.')[0]) {
-                return v.split('.')[0];
-            } else {
-                return 'app';
-            }
-        }
-
-        function fileDir(v) {
-            if (v.split('.')[1]) {
-                return v.split('.')[1];
-            } else if (!v.split('.')[0]) {
-                return v;
-            } else {
-                return 'home';
-            }
-        }
-
-        function fileName(v) {
-            if (v.split('.')[2]) {
-                return v.split('.')[2];
-            } else if (!v.split('.')[2]) {
-                if (v.split('.')[1]) {
-                    return v.split('.')[1];
-                }
-            } else {
-                return 'home';
-            }
-        }
 
     }
 
