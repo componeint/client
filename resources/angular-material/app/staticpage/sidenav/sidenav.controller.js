@@ -1,4 +1,5 @@
 /**
+ * sidenav.controller.js
  * Created by anonymous on 03/01/16 4:33.
  */
 
@@ -6,7 +7,7 @@
     'use strict';
 
     angular
-        .module('client')
+        .module('app')
         .controller('StaticpageSidenavController', StaticpageSidenavController);
 
     StaticpageSidenavController.$inject = ['$timeout', '$mdSidenav', '$log'];
@@ -14,7 +15,6 @@
     /* @ngInject */
     function StaticpageSidenavController($timeout, $mdSidenav, $log) {
         var vm   = this;
-        vm.title = 'StaticpageSidenavController';
         vm.close = function() {
             $mdSidenav('left').close().then(function() {
                 // $log.debug("close LEFT is done");

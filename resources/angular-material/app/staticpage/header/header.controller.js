@@ -1,4 +1,5 @@
 /**
+ * header.controller.js
  * Created by anonymous on 10/12/15 8:19.
  */
 
@@ -6,7 +7,7 @@
     'use strict';
 
     angular
-        .module('client')
+        .module('app')
         .controller('StaticpageHeaderController', StaticpageHeaderController);
 
     StaticpageHeaderController.$inject = ['$timeout', '$mdSidenav', '$log'];
@@ -14,22 +15,19 @@
     /* @ngInject */
     function StaticpageHeaderController($timeout, $mdSidenav, $log) {
         var vm         = this;
-        vm.title       = 'StaticpageHeaderController';
         vm.toggleLeft  = buildDelayedToggler('left');
         vm.toggleRight = buildToggler('right');
         vm.isOpenRight = function() {
             return $mdSidenav('right').isOpen();
         };
 
-        /*
-         activate();
+        activate();
 
-         ////////////////
+        ////////////////
 
-         function activate() {
-         //
-         }
-         */
+        function activate() {
+            //
+        }
 
         /**
          * Build handler to open/close a SideNav; when animation finishes

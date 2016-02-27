@@ -1,4 +1,5 @@
 /**
+ * footer.controller.js
  * Created by anonymous on 10/12/15 8:06.
  */
 
@@ -6,7 +7,7 @@
     'use strict';
 
     angular
-        .module('client')
+        .module('app')
         .controller('StaticpageFooterController', StaticpageFooterController);
 
     StaticpageFooterController.$inject = [];
@@ -14,7 +15,6 @@
     /* @ngInject */
     function StaticpageFooterController() {
         var vm   = this;
-        vm.title = 'StaticpageFooterController';
 
         activate();
 

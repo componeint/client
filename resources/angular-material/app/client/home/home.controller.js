@@ -1,4 +1,5 @@
 /**
+ * home.controller.js
  * Created by anonymous on 10/12/15 2:32.
  */
 
@@ -6,7 +7,7 @@
     'use strict';
 
     angular
-        .module('client')
+        .module('app')
         .controller('ClientHomeController', ClientHomeController);
 
     ClientHomeController.$inject = [];
@@ -14,7 +15,6 @@
     /* @ngInject */
     function ClientHomeController() {
         var vm   = this;
-        vm.title = 'ClientHomeController';
 
         activate();
 

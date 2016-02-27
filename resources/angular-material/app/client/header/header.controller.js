@@ -1,4 +1,5 @@
 /**
+ * header.controller.js
  * Created by anonymous on 10/12/15 2:24.
  */
 
@@ -6,7 +7,7 @@
     'use strict';
 
     angular
-        .module('client')
+        .module('app')
         .controller('ClientHeaderController', ClientHeaderController);
 
     ClientHeaderController.$inject = ['$timeout', '$mdSidenav', '$log'];
@@ -14,22 +15,19 @@
     /* @ngInject */
     function ClientHeaderController($timeout, $mdSidenav, $log) {
         var vm         = this;
-        vm.title       = 'ClientHeaderController';
         vm.toggleLeft  = buildDelayedToggler('left');
         vm.toggleRight = buildToggler('right');
         vm.isOpenRight = function() {
             return $mdSidenav('right').isOpen();
         };
 
-        /*
-         activate();
+        activate();
 
-         ////////////////
+        ////////////////
 
-         function activate() {
-         //
-         }
-         */
+        function activate() {
+            //
+        }
 
         /**
          * Build handler to open/close a SideNav; when animation finishes

@@ -1,4 +1,5 @@
 /**
+ * footer.controller.js
  * Created by anonymous on 10/12/15 2:22.
  */
 
@@ -6,7 +7,7 @@
     'use strict';
 
     angular
-        .module('client')
+        .module('app')
         .controller('ClientFooterController', ClientFooterController);
 
     ClientFooterController.$inject = [];
@@ -14,7 +15,6 @@
     /* @ngInject */
     function ClientFooterController() {
         var vm   = this;
-        vm.title = 'ClientFooterController';
 
         activate();
 

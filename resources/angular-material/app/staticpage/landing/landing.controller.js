@@ -1,4 +1,5 @@
 /**
+ * landing.controller.js
  * Created by anonymous on 10/12/15 8:22.
  */
 
@@ -6,7 +7,7 @@
     'use strict';
 
     angular
-        .module('client')
+        .module('app')
         .controller('StaticpageLandingController', StaticpageLandingController);
 
     StaticpageLandingController.$inject = [];
@@ -14,7 +15,6 @@
     /* @ngInject */
     function StaticpageLandingController() {
         var vm   = this;
-        vm.title = 'StaticpageLandingController';
 
         activate();
 
