@@ -64,28 +64,28 @@
                 url     : '/page',
                 views   : {
                     'layout@'           : {
-                        templateUrl : layoutProvider.layout('staticpage.simple'),
+                        templateUrl : layoutProvider.layout('minimalist.theme'),
                         controller  : 'StaticpageController',
                         controllerAs: 'staticpage'
                     },
                     'header@staticpage' : {
-                        templateUrl : layoutProvider.view('staticpage.header'),
-                        controller  : 'StaticpageHeaderController',
+                        templateUrl : layoutProvider.layout('minimalist.header'),
+                        controller  : 'HeaderController',
                         controllerAs: 'header'
                     },
                     'sidenav@staticpage': {
-                        templateUrl : layoutProvider.view('staticpage.sidenav'),
-                        controller  : 'StaticpageSidenavController',
+                        templateUrl : layoutProvider.layout('minimalist.sidenav'),
+                        controller  : 'SidenavController',
                         controllerAs: 'sidenav'
                     },
                     'aside@staticpage'  : {
-                        templateUrl : layoutProvider.view('staticpage.aside'),
-                        controller  : 'StaticpageAsideController',
+                        templateUrl : layoutProvider.layout('minimalist.aside'),
+                        controller  : 'AsideController',
                         controllerAs: 'aside'
                     },
                     'footer@staticpage' : {
-                        templateUrl : layoutProvider.view('staticpage.footer'),
-                        controller  : 'StaticpageFooterController',
+                        templateUrl : layoutProvider.layout('minimalist.footer'),
+                        controller  : 'FooterController',
                         controllerAs: 'footer'
                     },
                     'main@staticpage'   : {}
