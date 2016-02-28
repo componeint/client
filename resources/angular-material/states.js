@@ -26,22 +26,22 @@
                         controllerAs: 'client'
                     },
                     'header@client' : {
-                        templateUrl : layoutProvider.view('client.header'),
+                        templateUrl : layoutProvider.view('themes.minimalist.header'),
                         controller  : 'ClientHeaderController',
                         controllerAs: 'header'
                     },
                     'sidenav@client': {
-                        templateUrl : layoutProvider.view('client.sidenav'),
+                        templateUrl : layoutProvider.view('themes.minimalist.sidenav'),
                         controller  : 'ClientSidenavController',
                         controllerAs: 'sidenav'
                     },
                     'aside@client'  : {
-                        templateUrl : layoutProvider.view('client.aside'),
+                        templateUrl : layoutProvider.view('themes.minimalist.aside'),
                         controller  : 'ClientAsideController',
                         controllerAs: 'aside'
                     },
                     'footer@client' : {
-                        templateUrl : layoutProvider.view('client.footer'),
+                        templateUrl : layoutProvider.view('themes.minimalist.footer'),
                         controller  : 'ClientFooterController',
                         controllerAs: 'footer'
                     },
