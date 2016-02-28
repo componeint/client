@@ -150,9 +150,9 @@
                 data   : {pageName: 'Profile'},
                 views  : {
                     'main@profile': {
-                        templateUrl : layoutProvider.view('profile.username'),
-                        controller  : 'ProfileUsernameController',
-                        controllerAs: 'profileUser'
+                        templateUrl : layoutProvider.view('profile.user'),
+                        controller  : 'ProfileUserController',
+                        controllerAs: '$ctrl'
                     }
                 },
                 resolve: {
