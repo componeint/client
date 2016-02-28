@@ -13,7 +13,6 @@
             'widgets',
 
             /* components */
-            'seneschal',
             'dashboard',
             'posts'
         ]);
