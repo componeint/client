@@ -48,9 +48,20 @@
                     'main@client'   : {}
                 }
             })
-            .state('client.home', {
+            .state('client.landing', {
                 url  : '/',
-                data : {pageName: 'Homepage'},
+                data : {pageName: 'Welcome'},
+                views: {
+                    'main@client': {
+                        templateUrl : layoutProvider.view('client.landing'),
+                        controller  : 'ClientLandingController',
+                        controllerAs: 'landing'
+                    }
+                }
+            })
+            .state('client.home', {
+                url  : '/home',
+                data : {pageName: 'Home'},
                 views: {
                     'main@client': {
                         templateUrl : layoutProvider.view('client.home'),
