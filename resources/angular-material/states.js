@@ -21,28 +21,28 @@
                 abstract: true,
                 views   : {
                     'layout@'       : {
-                        templateUrl : layoutProvider.layout('themes.minimalist'),
+                        templateUrl : layoutProvider.layout('minimalist.main'),
                         controller  : 'ClientController',
                         controllerAs: 'client'
                     },
                     'header@client' : {
-                        templateUrl : layoutProvider.view('themes.minimalist.header'),
-                        controller  : 'ClientHeaderController',
+                        templateUrl : layoutProvider.layout('minimalist.header'),
+                        controller  : 'HeaderController',
                         controllerAs: 'header'
                     },
                     'sidenav@client': {
-                        templateUrl : layoutProvider.view('themes.minimalist.sidenav'),
-                        controller  : 'ClientSidenavController',
+                        templateUrl : layoutProvider.layout('minimalist.sidenav'),
+                        controller  : 'SidenavController',
                         controllerAs: 'sidenav'
                     },
                     'aside@client'  : {
-                        templateUrl : layoutProvider.view('themes.minimalist.aside'),
-                        controller  : 'ClientAsideController',
+                        templateUrl : layoutProvider.layout('minimalist.aside'),
+                        controller  : 'AsideController',
                         controllerAs: 'aside'
                     },
                     'footer@client' : {
-                        templateUrl : layoutProvider.view('themes.minimalist.footer'),
-                        controller  : 'ClientFooterController',
+                        templateUrl : layoutProvider.layout('minimalist.footer'),
+                        controller  : 'FooterController',
                         controllerAs: 'footer'
                     },
                     'main@client'   : {}
