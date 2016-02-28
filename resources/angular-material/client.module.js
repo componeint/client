@@ -13,8 +13,9 @@
             'widgets',
 
             /* components */
+            'seneschal',
             'dashboard',
-            'seneschal'
+            'posts'
         ]);
 
 })();
