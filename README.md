@@ -17,14 +17,14 @@ PSRs you support to avoid any confusion with users and contributors.
 Via Composer
 
 ``` bash
-$ composer require onderdelen/client
+$ composer require componeint/client
 ```
 
 ## Usage
 
 ``` php
-$client = new Onderdelen\Client();
-echo $client->echoPhrase('Hello, Onderdelen!');
+$client = new Componeint\Client();
+echo $client->echoPhrase('Hello, Componeint!');
 ```
 
 ## Change log
@@ -54,17 +54,17 @@ If you discover any security related issues, please email 50c5ac69@opayq.com ins
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/onderdelen/client.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/componeint/client.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/onderdelen/client/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/onderdelen/client.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/onderdelen/client.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/onderdelen/client.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/componeint/client/master.svg?style=flat-square
+[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/componeint/client.svg?style=flat-square
+[ico-code-quality]: https://img.shields.io/scrutinizer/g/componeint/client.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/componeint/client.svg?style=flat-square
 
-[link-packagist]: https://packagist.org/packages/onderdelen/client
-[link-travis]: https://travis-ci.org/onderdelen/client
-[link-scrutinizer]: https://scrutinizer-ci.com/g/onderdelen/client/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/onderdelen/client
-[link-downloads]: https://packagist.org/packages/onderdelen/client
-[link-author]: https://github.com/onderdelen
+[link-packagist]: https://packagist.org/packages/componeint/client
+[link-travis]: https://travis-ci.org/componeint/client
+[link-scrutinizer]: https://scrutinizer-ci.com/g/componeint/client/code-structure
+[link-code-quality]: https://scrutinizer-ci.com/g/componeint/client
+[link-downloads]: https://packagist.org/packages/componeint/client
+[link-author]: https://github.com/componeint
 [link-contributors]: ../../contributors

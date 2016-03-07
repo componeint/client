@@ -4,7 +4,7 @@
  * Created by anonymous on 09/12/15 13:12.
  */
 
-namespace Onderdelen\Client;
+namespace Componeint\Client;
 
 use ReflectionClass;
 use Illuminate\Foundation\AliasLoader;
@@ -37,10 +37,10 @@ class ClientServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->register(\Onderdelen\AppFoundation\AppFoundationServiceProvider::class);
-        $this->app->register(\Onderdelen\Seneschal\SeneschalServiceProvider::class);
-        $this->app->register(\Onderdelen\Dashboard\DashboardServiceProvider::class);
-        $this->app->register(\Onderdelen\Posts\PostsServiceProvider::class);
+        $this->app->register(\Componeint\AppFoundation\AppFoundationServiceProvider::class);
+        $this->app->register(\Componeint\Seneschal\SeneschalServiceProvider::class);
+        $this->app->register(\Componeint\Dashboard\DashboardServiceProvider::class);
+        $this->app->register(\Componeint\Posts\PostsServiceProvider::class);
     }
 
     /**

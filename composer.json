@@ -1,17 +1,17 @@
 {
-  "name"             : "onderdelen/client",
+  "name"             : "componeint/client",
   "description"      : "Description client.",
   "keywords"         : [
-    "onderdelen",
+    "componeint",
     "client"
   ],
-  "homepage"         : "https://github.com/onderdelen/client",
+  "homepage"         : "https://github.com/componeint/client",
   "license"          : "MIT",
   "authors"          : [
     {
       "name"    : "anonymoussc",
       "email"   : "50c5ac69@opayq.com",
-      "homepage": "https://github.com/onderdelen/",
+      "homepage": "https://github.com/componeint/",
       "role"    : "Developer"
     }
   ],
@@ -33,12 +33,12 @@
       "tests"
     ],
     "psr-4"   : {
-      "Onderdelen\\Client\\": "src"
+      "Componeint\\Client\\": "src"
     }
   },
   "autoload-dev"     : {
     "psr-4": {
-      "Onderdelen\\Client\\Test\\": "tests"
+      "Componeint\\Client\\Test\\": "tests"
     }
   },
   "minimum-stability": "stable"
