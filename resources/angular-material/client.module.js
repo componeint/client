@@ -9,13 +9,9 @@
     angular
         .module('client', [
             /* Shared */
-            'appFoundation',
-            'widgets',
 
-            /* components */
-            'seneschal',
-            'dashboard',
-            'posts'
+            /* Components */
+
         ]);
 
 })();
