@@ -63,6 +63,20 @@
                 }
             });
 
+        function skipIfLoggedIn($q, $auth) {
+
+            var deferred = $q.defer();
+
+            if ($auth.isAuthenticated()) {
+                deferred.reject();
+            } else {
+                deferred.resolve();
+            }
+
+            return deferred.promise;
+
+        }
+
         function loginRequired($q, $state, $auth) {
 
             var deferred = $q.defer();
