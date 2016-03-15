@@ -69,96 +69,21 @@
                         controllerAs: 'home'
                     }
                 }
-            })
-            .state('staticpage', {
-                abstract: true,
-                url     : '/page',
-                views   : {
-                    'layout@'           : {
-                        templateUrl : layoutProvider.layout('minimalist.theme'),
-                        controller  : 'StaticpageController',
-                        controllerAs: 'staticpage'
-                    },
-                    'header@staticpage' : {
-                        templateUrl : layoutProvider.layout('minimalist.header'),
-                        controller  : 'HeaderController',
-                        controllerAs: 'header'
-                    },
-                    'sidenav@staticpage': {
-                        templateUrl : layoutProvider.layout('minimalist.sidenav'),
-                        controller  : 'SidenavController',
-                        controllerAs: 'sidenav'
-                    },
-                    'aside@staticpage'  : {
-                        templateUrl : layoutProvider.layout('minimalist.aside'),
-                        controller  : 'AsideController',
-                        controllerAs: 'aside'
-                    },
-                    'footer@staticpage' : {
-                        templateUrl : layoutProvider.layout('minimalist.footer'),
-                        controller  : 'FooterController',
-                        controllerAs: 'footer'
-                    },
-                    'main@staticpage'   : {}
-                }
-            })
-            .state('staticpage.landing', {
-                url  : '/',
-                data : {pageName: 'Landing page'},
-                views: {
-                    'main@staticpage': {
-                        templateUrl : layoutProvider.view('staticpage.landing'),
-                        controller  : 'StaticpageLandingController',
-                        controllerAs: 'landing'
-                    }
-                }
-            })
-            .state('profile', {
-                abstract: true,
-                url     : '/profile',
-                views   : {
-                    'layout@'        : {
-                        templateUrl : layoutProvider.layout('minimalist.theme'),
-                        controller  : 'ProfileController',
-                        controllerAs: 'profile'
-                    },
-                    'header@profile' : {
-                        templateUrl : layoutProvider.layout('minimalist.header'),
-                        controller  : 'HeaderController',
-                        controllerAs: 'header'
-                    },
-                    'sidenav@profile': {
-                        templateUrl : layoutProvider.layout('minimalist.sidenav'),
-                        controller  : 'SidenavController',
-                        controllerAs: 'sidenav'
-                    },
-                    'aside@profile'  : {
-                        templateUrl : layoutProvider.layout('minimalist.aside'),
-                        controller  : 'AsideController',
-                        controllerAs: 'aside'
-                    },
-                    'footer@profile' : {
-                        templateUrl : layoutProvider.layout('minimalist.footer'),
-                        controller  : 'FooterController',
-                        controllerAs: 'footer'
-                    },
-                    'main@profile'   : {}
-                }
-            })
-            .state('profile.user', {
-                url    : '/{user}',
-                data   : {pageName: 'Profile'},
-                views  : {
-                    'main@profile': {
-                        templateUrl : layoutProvider.view('profile.user'),
-                        controller  : 'ProfileUserController',
-                        controllerAs: '$ctrl'
-                    }
-                },
-                resolve: {
-                    loginRequired: loginRequired
-                }
             });
+
+        function skipIfLoggedIn($q, $auth) {
+
+            var deferred = $q.defer();
+
+            if ($auth.isAuthenticated()) {
+                deferred.reject();
+            } else {
+                deferred.resolve();
+            }
+
+            return deferred.promise;
+
+        }
 
         function loginRequired($q, $state, $auth) {
 
