@@ -1,5 +1,5 @@
 /**
- * states.js
+ * client.state.js
  * Created by anonymous on 09/12/15 13:12.
  */
 
@@ -8,12 +8,12 @@
 
     angular
         .module('client')
-        .config(clientRouter);
+        .config(clientState);
 
-    clientRouter.$inject = ['$stateProvider', '$urlRouterProvider', 'layoutProvider'];
+    clientState.$inject = ['$stateProvider', '$urlRouterProvider', 'layoutProvider'];
 
     /* @ngInject */
-    function clientRouter($stateProvider, $urlRouterProvider, layoutProvider) {
+    function clientState($stateProvider, $urlRouterProvider, layoutProvider) {
         $urlRouterProvider.otherwise('/');
 
         $stateProvider
@@ -161,7 +161,9 @@
             });
 
         function loginRequired($q, $state, $auth) {
+
             var deferred = $q.defer();
+
             if ($auth.isAuthenticated()) {
                 deferred.resolve();
             } else {
@@ -169,6 +171,7 @@
             }
 
             return deferred.promise;
+
         }
 
     }
