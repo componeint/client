@@ -53,5 +53,4 @@ class ClientServiceProvider extends ServiceProvider
     {
         return [];
     }
-
 }
