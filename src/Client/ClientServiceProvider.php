@@ -1,7 +1,7 @@
 <?php
 /**
  * ClientServiceProvider.php
- * Created by anonymous on 09/12/15 13:12.
+ * Created by @anonymoussc on 09/12/15 13:12.
  */
 
 namespace Componeint\Client;
@@ -12,7 +12,6 @@ use Illuminate\Support\ServiceProvider;
 
 class ClientServiceProvider extends ServiceProvider
 {
-
     /**
      * Indicates if loading of the provider is deferred.
      *
@@ -27,7 +26,12 @@ class ClientServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $componenentsFileName = with(new ReflectionClass('\Componeint\Client\ClientServiceProvider'))->getFileName();
+        $componenentsPath     = dirname($componenentsFileName);
 
+        $this->loadViewsFrom($componenentsPath . '/../../resources/views', 'appFoundation');
+
+        // include $componenentsPath . '/../routes.php';
     }
 
     /**
