@@ -29,7 +29,7 @@ class ClientServiceProvider extends ServiceProvider
         $componenentsFileName = with(new ReflectionClass('\Componeint\Client\ClientServiceProvider'))->getFileName();
         $componenentsPath     = dirname($componenentsFileName);
 
-        $this->loadViewsFrom($componenentsPath . '/../../resources/views', 'appFoundation');
+        $this->loadViewsFrom($componenentsPath . '/../../resources/views', 'client');
 
         // include $componenentsPath . '/../routes.php';
     }
